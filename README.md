@@ -7,7 +7,4 @@
 
 ## Also learn a little bit of:
 
-
-![Alt text](https://github.com/nandoligeiro/movieOne/blob/master/movione.png)
-
 ****
