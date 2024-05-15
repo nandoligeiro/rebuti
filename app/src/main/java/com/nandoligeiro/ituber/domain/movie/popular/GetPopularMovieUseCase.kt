@@ -7,8 +7,8 @@ import com.nandoligeiro.ituber.domain.movie.popular.entity.PopularMovieDomain
 class GetPopularMovieUseCase(
     private val repository: GetPopularMovieRepository,
     coroutineContextProvider: CoroutineContextProvider
-) : BackgroundExecutingUseCase<String, PopularMovieDomain>(coroutineContextProvider) {
+) : BackgroundExecutingUseCase<Int, PopularMovieDomain>(coroutineContextProvider) {
     override fun executeInBackground(
-        request: String
+        request: Int
     ): PopularMovieDomain = repository.getPopularMovie()
 }

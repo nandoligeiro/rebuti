@@ -33,11 +33,9 @@ class GetPopularMovieUseCaseTest() {
             repository.getPopularMovie()
         } returns mockk()
 
-        getPopularMovieUseCase.executeInBackground("1")
+        getPopularMovieUseCase.executeInBackground(1)
 
         coVerify(exactly = 1) { repository.getPopularMovie() }
 
-
     }
-
 }
