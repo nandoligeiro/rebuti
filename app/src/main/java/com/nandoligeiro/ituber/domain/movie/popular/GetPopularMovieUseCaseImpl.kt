@@ -1,0 +1,16 @@
+package com.nandoligeiro.ituber.domain.movie.popular
+
+import com.nandoligeiro.ituber.di.IoDispatcher
+import kotlinx.coroutines.CoroutineDispatcher
+import kotlinx.coroutines.withContext
+import javax.inject.Inject
+
+class GetPopularMovieUseCaseImpl @Inject constructor(
+    private val repository: GetPopularMovieRepository,
+    @IoDispatcher private val dispatcher: CoroutineDispatcher
+) : GetPopularMovieUseCase {
+
+    override suspend fun invoke(request: Int) = withContext(dispatcher) {
+        repository.getPopularMovie()
+    }
+}
