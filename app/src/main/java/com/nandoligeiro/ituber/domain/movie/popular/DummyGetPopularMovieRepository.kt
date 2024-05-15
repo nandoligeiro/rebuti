@@ -4,7 +4,7 @@ import com.nandoligeiro.ituber.domain.movie.popular.entity.PopularMovieDomain
 import com.nandoligeiro.ituber.domain.movie.popular.entity.PopularMovieResultDomain
 
 class DummyGetPopularMovieRepository : GetPopularMovieRepository {
-    override fun getPopularMovie(): PopularMovieDomain = PopularMovieDomain(
+    override suspend fun getPopularMovie(): PopularMovieDomain = PopularMovieDomain(
         page = 1,
         results = listOf(
             PopularMovieResultDomain(
