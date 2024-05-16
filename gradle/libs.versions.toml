@@ -19,6 +19,8 @@ okhttp = "4.9.3"
 ksp = "1.9.24-1.0.20"
 junitKtx = "1.1.5"
 multidex = "2.0.1"
+navigationCompose = "2.7.7"
+coil = "2.6.0"
 
 
 [libraries]
@@ -49,7 +51,8 @@ retrofit-moshi-converter = { module = "com.squareup.retrofit2:converter-moshi", 
 httpLoggingInterceptor = { module = "com.squareup.okhttp3:logging-interceptor", version.ref = "okhttp" }
 androidx-junit-ktx = { group = "androidx.test.ext", name = "junit-ktx", version.ref = "junitKtx" }
 multidex = { module = "androidx.multidex:multidex", version.ref = "multidex" }
-
+navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "navigationCompose" }
+coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "coil" }
 
 
 [plugins]
