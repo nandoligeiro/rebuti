@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Ituber</string>
+    <string name="url_image_tmdb_w1280">https://image.tmdb.org/t/p/w1280%1$s</string>
+    <string name="popular_movies">Filmes Populares</string>
+    <string name="nav_home">home</string>
+    <string name="nav_details_movie">details/{movie}</string>
+    <string name="arg_movie">movie</string>
 </resources>

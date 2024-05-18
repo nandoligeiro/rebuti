@@ -21,7 +21,7 @@ class PopularMovieDomainToUiMapper {
                     popularity = result.popularity,
                     posterPath = result.posterPath,
                     releaseDate = result.releaseDate,
-                    title = result.releaseDate,
+                    title = result.title,
                     video = result.video,
                     voteAverage = result.voteAverage,
                     voteCount = result.voteCount

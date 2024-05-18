@@ -13,6 +13,7 @@ moshiCodeGen = "1.15.1"
 mockk = "1.13.4"
 mockkAgentJvm = "1.13.5"
 hiltVersion = "2.51.1"
+hiltCompose = "1.2.0"
 hiltAndroidTestingVersion = "2.51.1"
 retrofit = "2.9.0"
 okhttp = "4.9.3"
@@ -21,7 +22,6 @@ junitKtx = "1.1.5"
 multidex = "2.0.1"
 navigationCompose = "2.7.7"
 coil = "2.6.0"
-
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -53,6 +53,7 @@ androidx-junit-ktx = { group = "androidx.test.ext", name = "junit-ktx", version.
 multidex = { module = "androidx.multidex:multidex", version.ref = "multidex" }
 navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "navigationCompose" }
 coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "coil" }
+hilt-compose = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "hiltCompose" }
 
 
 [plugins]

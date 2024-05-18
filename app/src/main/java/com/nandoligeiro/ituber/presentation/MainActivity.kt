@@ -8,19 +8,19 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.nandoligeiro.ituber.presentation.screen.home.HomeScreen
+import com.nandoligeiro.ituber.presentation.screen.home.HomeViewModel
 import com.nandoligeiro.ituber.ui.theme.ItuberTheme
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
 
-    private val viewModel: MainViewModel by viewModels()
+    private val viewModel: HomeViewModel by viewModels()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
             ItuberTheme {
-               HomeScreen(viewModel)
+               NavigationApp()
             }
         }
     }

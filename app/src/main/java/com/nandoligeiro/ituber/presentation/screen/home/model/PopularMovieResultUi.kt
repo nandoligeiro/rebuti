@@ -1,4 +1,8 @@
 package com.nandoligeiro.ituber.presentation.screen.home.model
+
+import com.squareup.moshi.JsonClass
+
+@JsonClass(generateAdapter = true)
 data class PopularMovieResultUi(
     val adult: Boolean,
     val backdropPath: String,
