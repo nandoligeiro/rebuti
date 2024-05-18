@@ -5,7 +5,6 @@ import com.nandoligeiro.ituber.domain.movie.popular.GetPopularMovieRepository
 import com.nandoligeiro.ituber.domain.movie.popular.entity.PopularMovieDomain
 import javax.inject.Inject
 
-
 class GetPopularMovieRepositoryImpl @Inject constructor(
     private val api: MovieApi,
     private val mapper: PopularMovieDataToDomainMapper

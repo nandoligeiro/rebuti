@@ -1,16 +1,16 @@
-package com.nandoligeiro.ituber.data.api.movie
+package com.nandoligeiro.ituber.presentation.screen.home
 
-import com.nandoligeiro.ituber.data.api.movie.model.PopularMovieData
 import com.nandoligeiro.ituber.domain.movie.popular.entity.PopularMovieDomain
-import com.nandoligeiro.ituber.domain.movie.popular.entity.PopularMovieResultDomain
+import com.nandoligeiro.ituber.presentation.screen.home.model.PopularMovieResultUi
+import com.nandoligeiro.ituber.presentation.screen.home.model.PopularMovieUi
 
-class PopularMovieDataToDomainMapper {
+class PopularMovieDomainToUiMapper {
 
-    fun toDomain(popularMovieData: PopularMovieData) =
-        PopularMovieDomain(
-            page = popularMovieData.page,
-            results = popularMovieData.results.map { result ->
-                PopularMovieResultDomain(
+    fun toUi(popularMovieDomain: PopularMovieDomain) =
+        PopularMovieUi(
+            page = popularMovieDomain.page,
+            results = popularMovieDomain.results.map { result ->
+                PopularMovieResultUi(
                     adult = result.adult,
                     backdropPath = result.backdropPath,
                     genreIds = result.genreIds,
@@ -27,7 +27,7 @@ class PopularMovieDataToDomainMapper {
                     voteCount = result.voteCount
                 )
             },
-            totalPages = popularMovieData.totalPages,
-            totalResults = popularMovieData.totalResults,
+            totalPages = popularMovieDomain.totalPages,
+            totalResults = popularMovieDomain.totalResults,
         )
 }

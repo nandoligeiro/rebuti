@@ -73,6 +73,7 @@ android {
 
 dependencies {
 
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
@@ -81,11 +82,15 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+    implementation(libs.navigation.compose)
+    implementation(libs.coil.compose)
     implementation(libs.multidex)
     implementation(libs.moshi.core)
     implementation(libs.moshi.kotlin.codegen)
     implementation(libs.androidx.junit.ktx)
     ksp(libs.moshi.kotlin.codegen)
+
+    implementation(libs.hilt.compose)
 
     implementation(libs.hilt.android)
     ksp(libs.hilt.android.compiler)
@@ -94,7 +99,6 @@ dependencies {
     implementation(libs.retrofit.moshi.converter)
 
     implementation(libs.httpLoggingInterceptor)
-
 
     // If you need Hilt for testing
     androidTestImplementation(libs.hilt.android.testing)

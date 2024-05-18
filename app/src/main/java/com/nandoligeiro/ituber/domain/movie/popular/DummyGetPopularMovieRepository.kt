@@ -1,7 +1,10 @@
 package com.nandoligeiro.ituber.domain.movie.popular
 
+import com.nandoligeiro.ituber.data.api.movie.model.PopularMovieData
+import com.nandoligeiro.ituber.data.api.movie.model.PopularMovieResultData
 import com.nandoligeiro.ituber.domain.movie.popular.entity.PopularMovieDomain
 import com.nandoligeiro.ituber.domain.movie.popular.entity.PopularMovieResultDomain
+
 
 class DummyGetPopularMovieRepository : GetPopularMovieRepository {
     override suspend fun getPopularMovie(): PopularMovieDomain = PopularMovieDomain(
