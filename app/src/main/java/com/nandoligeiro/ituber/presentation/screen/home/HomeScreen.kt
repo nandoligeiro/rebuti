@@ -49,7 +49,7 @@ fun HomeScreen(
 
     LaunchedEffect(Unit) {
         if (popularMovie !is UiState.Success) {
-            viewModel.getPopularMovie(2)
+            viewModel.getPopularMovie(1)
         }
     }
 

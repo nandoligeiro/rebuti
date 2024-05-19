@@ -7,4 +7,12 @@
 
 ## Also learn a little bit of:
 
+- MVVM + Clean Architecture
+- Hilt
+- Moshi
+- Coroutines
+- Retrofit
+- Compose
+- Coil
+- MockK
 ****
