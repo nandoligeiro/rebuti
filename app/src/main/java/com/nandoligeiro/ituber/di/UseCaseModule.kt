@@ -1,5 +1,7 @@
 package com.nandoligeiro.ituber.di
 
+import com.nandoligeiro.ituber.domain.detail.GetDetailMovieByIdUseCase
+import com.nandoligeiro.ituber.domain.detail.GetDetailMovieByIdUseCaseImpl
 import com.nandoligeiro.ituber.domain.movie.popular.GetPopularMovieUseCase
 import com.nandoligeiro.ituber.domain.movie.popular.GetPopularMovieUseCaseImpl
 import dagger.Binds
@@ -15,4 +17,8 @@ interface UseCaseModule {
         useCase: GetPopularMovieUseCaseImpl
     ): GetPopularMovieUseCase
 
+    @Binds
+    fun bindGetDetailMovieByIdUseCase(
+        useCase: GetDetailMovieByIdUseCaseImpl
+    ): GetDetailMovieByIdUseCase
 }

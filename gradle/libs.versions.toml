@@ -22,6 +22,9 @@ junitKtx = "1.1.5"
 multidex = "2.0.1"
 navigationCompose = "2.7.7"
 coil = "2.6.0"
+iconExtended = "1.6.7"
+coreTesting = "2.1.0"
+coroutineTest = "1.6.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -39,6 +42,8 @@ androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-man
 androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
 moshi-core = { module = "com.squareup.moshi:moshi", version.ref = "moshi" }
+moshi-adapters = { module = "com.squareup.moshi:moshi-adapters", version.ref = "moshi" }
+moshi-kotlin = { module = "com.squareup.moshi:moshi-kotlin", version.ref = "moshi" }
 moshi-kotlin-codegen = { module = "com.squareup.moshi:moshi-kotlin-codegen", version.ref = "moshiCodeGen" }
 mockk = { module = "io.mockk:mockk", version.ref = "mockk" }
 mockkAgentJvm = { module = "io.mockk:mockk-agent-jvm", version.ref = "mockkAgentJvm" }
@@ -54,6 +59,9 @@ multidex = { module = "androidx.multidex:multidex", version.ref = "multidex" }
 navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "navigationCompose" }
 coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "coil" }
 hilt-compose = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "hiltCompose" }
+icon-extended = { module = "androidx.compose.material:material-icons-extended", version.ref = "iconExtended" }
+core-testing = { module = "androidx.arch.core:core-testing", version.ref = "coreTesting" }
+coroutine-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "coroutineTest" }
 
 
 [plugins]

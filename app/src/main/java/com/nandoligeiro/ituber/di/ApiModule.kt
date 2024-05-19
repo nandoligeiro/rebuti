@@ -2,7 +2,10 @@ package com.nandoligeiro.ituber.di
 
 import com.nandoligeiro.ituber.BuildConfig
 import com.nandoligeiro.ituber.data.api.MovieApi
+import com.nandoligeiro.ituber.presentation.common.NullToEmptyListAdapter
+import com.nandoligeiro.ituber.presentation.common.NullToEmptyStringAdapter
 import com.squareup.moshi.Moshi
+import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -41,13 +44,16 @@ object ApiModule {
     fun provideRetrofit(okHttpClient: OkHttpClient, moshi: Moshi): Retrofit = Retrofit.Builder()
         .baseUrl(BASE_URL)
         .client(okHttpClient)
-        .addConverterFactory(MoshiConverterFactory.create(moshi))
+        .addConverterFactory(MoshiConverterFactory.create(moshi).asLenient())
         .build()
 
     @Provides
     @Singleton
     fun provideMoshi(): Moshi {
         return Moshi.Builder()
+            .add(NullToEmptyListAdapter())
+            .add(NullToEmptyStringAdapter())
+            .add(KotlinJsonAdapterFactory())
             .build()
     }
 
