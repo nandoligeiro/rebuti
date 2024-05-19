@@ -29,12 +29,12 @@ class GetPopularMovieUseCaseImplTest {
     @Test
     fun `Should call method repository`() = runBlocking {
         coEvery {
-            repository.getPopularMovie()
+            repository.getPopularMovie(any())
         } returns mockk()
 
         getPopularMovieUseCase(1)
 
-        coVerify(exactly = 1) { repository.getPopularMovie() }
+        coVerify(exactly = 1) { repository.getPopularMovie(any()) }
 
     }
 }

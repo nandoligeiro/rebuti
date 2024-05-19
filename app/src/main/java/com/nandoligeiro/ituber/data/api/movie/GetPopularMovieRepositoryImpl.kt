@@ -9,7 +9,6 @@ class GetPopularMovieRepositoryImpl @Inject constructor(
     private val api: MovieApi,
     private val mapper: PopularMovieDataToDomainMapper
 ) : GetPopularMovieRepository {
-    override suspend fun getPopularMovie(): PopularMovieDomain =
-        mapper.toDomain(api.getPopularMovie())
-
+    override suspend fun getPopularMovie(page: Int): PopularMovieDomain =
+        mapper.toDomain(api.getPopularMovie(page))
 }
